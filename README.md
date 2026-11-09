@@ -29,4 +29,4 @@ GitHub Pages can't send email by itself, so the form opens the visitor's email a
 
 ### Font
 
-The site uses Neue Haas Grotesk Display Pro, loaded from Wix's font server (the same way the original site did). It falls back to Helvetica/Arial if that server is unavailable.
+The site uses Inter, loaded from Google Fonts, with Helvetica/Arial as a fallback.
