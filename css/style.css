@@ -326,7 +326,7 @@ a.tile { cursor: pointer; }
 .blank-page { height: calc(8373 * var(--u)); }
 
 /* ---------- Vacuum ---------- */
-.gallery { display: flex; flex-direction: column; gap: 20pt; }  /* space between project images */
+.gallery { display: flex; flex-direction: column; gap: 20pt; padding: 0 40pt; }  /* space between project images */
 .gallery img { width: 100%; height: auto; }
 .gallery .sketch { aspect-ratio: 1268 / 724; object-fit: cover; }
 
