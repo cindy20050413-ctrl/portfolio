@@ -388,7 +388,7 @@ a.tile { cursor: pointer; }
 
   .section-title { font-size: calc(24 * var(--u)); line-height: 1.1; }
 
-  .tiles { grid-template-columns: 1fr; padding: 0 6.15385%; row-gap: calc(40 * var(--u)); }
+  .tiles { grid-template-columns: 1fr; padding: 0; row-gap: 0; }   /* tiles edge to edge, no gaps */
   .tile { height: calc(356 * var(--u)); }
   .tile .t1 { font-size: 28px; line-height: 38px; }
 
@@ -449,4 +449,7 @@ a.tile { cursor: pointer; }
   .social a, .social img { width: 30px; height: 30px; }
 
   .blank-page { height: calc(2000 * var(--u)); }
+
+  /* project pages: full-width images, 10pt above and below each */
+  .gallery { padding: 10pt 0; gap: 10pt; }
 }
