@@ -58,7 +58,7 @@ a { color: inherit; }
 
 .nav {
   position: absolute;
-  left: calc(834 * var(--u));
+  right: calc(32 * var(--u));   /* same space on the right as the name has on the left */
   top: 0;
   height: 100%;
   display: flex;
