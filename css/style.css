@@ -337,7 +337,15 @@ a.tile { cursor: pointer; }
   .site { --u: calc(100cqw / 390); }
 
   .site-header { height: calc(60 * var(--u)); overflow: visible; }
-  .logo, .nav { display: none; }
+  .nav { display: none; }
+  /* name in the phone header, links back to Overview */
+  .logo {
+    left: calc(24 * var(--u));
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(20 * var(--u));
+    line-height: 1.1;
+  }
 
   .menu-toggle {
     display: flex;
@@ -428,6 +436,15 @@ a.tile { cursor: pointer; }
   .about .hero .intro { margin-top: calc(12 * var(--u)); font-size: calc(16 * var(--u)); line-height: 1.35; }
   .about .hero .hero-text { padding: calc(80 * var(--u)) 6.15385%; }
   .about .hero { min-height: calc(600 * var(--u)); }
+
+  /* Overview hero on phones: darken the photo so the text is readable */
+  .home .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.6));
+  }
+  .home .hero .hero-text { z-index: 1; }
 
   /* contact */
   .contact-main { height: auto; padding: calc(40 * var(--u)) 0; }
