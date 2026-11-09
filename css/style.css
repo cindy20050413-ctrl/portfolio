@@ -152,6 +152,12 @@ a { color: inherit; }
 .tile .t1 { font-size: 36px; line-height: 49px; }
 .tile .t2 { font-size: 18px; line-height: 24px; }
 a.tile { cursor: pointer; }
+.tile, .tile img {
+  -webkit-touch-callout: none;   /* no long-press popup on iPhone */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
 /* ---------- Overview (home) ---------- */
 .hero {
