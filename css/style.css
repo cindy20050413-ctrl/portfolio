@@ -442,6 +442,14 @@ a.tile { cursor: pointer; }
   .about .hero .intro { margin-top: calc(12 * var(--u)); font-size: calc(16 * var(--u)); line-height: 1.35; }
   .about .hero .hero-text { padding: calc(80 * var(--u)) 6.15385%; }
   .about .hero { min-height: calc(600 * var(--u)); }
+  /* About photo on phones: shifted down so the face sits just below the text */
+  .about .hero { height: calc(918 * var(--u)); }
+  .about .hero-bg {
+    top: calc(150 * var(--u));
+    height: calc(768 * var(--u));
+    -webkit-mask-image: linear-gradient(transparent, #000 12%);
+    mask-image: linear-gradient(transparent, #000 12%);
+  }
 
   /* Overview hero on phones: darken the photo so the text is readable */
   .home .hero::after {
