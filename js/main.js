@@ -8,6 +8,22 @@ document.querySelectorAll('.tile').forEach(function (tile) {
   tile.addEventListener('focus', on);
   tile.addEventListener('blur', off);
 });
+// Phones: holding a finger on a tile shows the same effect as hovering.
+// It turns off when the finger lifts or starts scrolling.
+document.querySelectorAll('.tile').forEach(function (tile) {
+  var on = function () { tile.classList.add('on'); };
+  var off = function () { tile.classList.remove('on'); };
+  tile.addEventListener('touchstart', on, { passive: true });
+  tile.addEventListener('touchend', off);
+  tile.addEventListener('touchcancel', off);
+  tile.addEventListener('touchmove', off, { passive: true });
+  // stop the phone's long-press menu (save image / open link) from popping up
+  tile.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+});
+// coming back with the Back button: make sure no tile is stuck "on"
+window.addEventListener('pageshow', function () {
+  document.querySelectorAll('.tile.on').forEach(function (t) { t.classList.remove('on'); });
+});
 window.addEventListener('blur', function () {
   document.querySelectorAll('.tile.on').forEach(function (t) { t.classList.remove('on'); });
 });
