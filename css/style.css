@@ -432,7 +432,7 @@ a.tile { cursor: pointer; }
     width: auto;
   }
   .home .hero h1, .about .hero h1 { font-size: calc(34 * var(--u)); line-height: .9; }
-  .home .hero .intro { margin-top: calc(12 * var(--u)); font-size: calc(20 * var(--u)); line-height: 1.35; }
+  .home .hero .intro { margin-top: calc(12 * var(--u)); font-size: calc(17 * var(--u)); line-height: 1.35; white-space: nowrap; }
   .about .hero .intro { margin-top: calc(12 * var(--u)); font-size: calc(16 * var(--u)); line-height: 1.35; }
   .about .hero .hero-text { padding: calc(80 * var(--u)) 6.15385%; }
   .about .hero { min-height: calc(600 * var(--u)); }
