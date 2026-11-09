@@ -3,20 +3,21 @@
 document.querySelectorAll('.tile').forEach(function (tile) {
   var on = function () { tile.classList.add('on'); };
   var off = function () { tile.classList.remove('on'); };
-  tile.addEventListener('mouseenter', on);
-  tile.addEventListener('mouseleave', off);
+  tile.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') on(); });
+  tile.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') off(); });
   tile.addEventListener('focus', on);
   tile.addEventListener('blur', off);
 });
-// Phones: holding a finger on a tile shows the same effect as hovering.
-// It turns off when the finger lifts or starts scrolling.
+// Phones: touching a tile (even while scrolling) switches it to the dark
+// image with the title, and it stays that way until another tile is touched.
+// A normal tap still opens the project page.
 document.querySelectorAll('.tile').forEach(function (tile) {
-  var on = function () { tile.classList.add('on'); };
-  var off = function () { tile.classList.remove('on'); };
-  tile.addEventListener('touchstart', on, { passive: true });
-  tile.addEventListener('touchend', off);
-  tile.addEventListener('touchcancel', off);
-  tile.addEventListener('touchmove', off, { passive: true });
+  tile.addEventListener('touchstart', function () {
+    document.querySelectorAll('.tile.on').forEach(function (t) {
+      if (t !== tile) t.classList.remove('on');
+    });
+    tile.classList.add('on');
+  }, { passive: true });
   // stop the phone's long-press menu (save image / open link) from popping up
   tile.addEventListener('contextmenu', function (e) { e.preventDefault(); });
 });
