@@ -447,6 +447,7 @@ a.tile { cursor: pointer; }
   .about .hero-bg {
     top: calc(150 * var(--u));
     height: calc(768 * var(--u));
+    object-position: 42.5% 42.6%;   /* centers Cindy under the text */
     -webkit-mask-image: linear-gradient(transparent, #000 12%);
     mask-image: linear-gradient(transparent, #000 12%);
   }
