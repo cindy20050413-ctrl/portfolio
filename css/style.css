@@ -446,6 +446,14 @@ a.tile { cursor: pointer; }
   }
   .home .hero .hero-text { z-index: 1; }
 
+  /* Overview hero on phones: same shape as the project-page images (5100 x 3300) */
+  .home .hero {
+    height: calc(100cqw * 3300 / 5100);
+    display: flex;
+    align-items: center;
+  }
+  .home .hero .hero-text { width: 100%; padding: 0 6.15385%; }
+
   /* contact */
   .contact-main { height: auto; padding: calc(40 * var(--u)) 0; }
   .contact-form {
