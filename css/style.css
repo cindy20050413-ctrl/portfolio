@@ -4,20 +4,6 @@
    window exactly like the Wix version did. Below 1024px the mobile
    layout takes over, where 1u = 1px at a 390px-wide screen. */
 
-@font-face {
-  font-family: "neue-haas-grotesk-display-pro";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("https://static.parastorage.com/fonts/v2/53e2d229-a577-4be1-ab95-07687ab57be1/v1/neue-haas-grotesk-display-pro.latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "neue-haas-grotesk-display-pro";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("https://static.parastorage.com/fonts/v2/29384c45-df1d-4d28-a0c3-3ed95c653ff4/v1/neue-haas-grotesk-display-pro.latin.woff2") format("woff2");
-}
 
 :root {
   --white: #ffffff;
@@ -26,8 +12,7 @@
   --sand: #ebe3d8;      /* accent 2 */
   --navy: #1d455e;      /* about page text */
   --grey: #595959;      /* shade 3 */
-  --font: "neue-haas-grotesk-display-pro", "Neue Haas Grotesk Display Pro",
-          "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
