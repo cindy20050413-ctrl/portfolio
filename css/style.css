@@ -49,7 +49,8 @@ a { color: inherit; }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: relative;
+  position: sticky;   /* stays at the top while scrolling, on every page */
+  top: 0;
   z-index: 50;
   height: calc(58 * var(--u));
   background: var(--white);
